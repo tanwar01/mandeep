@@ -31,11 +31,13 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-153519124-1');
+    gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    ga('set', 'userId', 'USER_ID'); // Set the user ID using signed-in user_id.
 	</script>
+  <script async src="js/trackUser.js"></script>
 
-    
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" onload="regesterEvent">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" onload="logUserActivity()">
   
 
 

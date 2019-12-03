@@ -16,6 +16,8 @@ function setCookie(value, days) {
     var d = new Date;
     d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
     document.cookie = "userId" + "=" + value + ";path=/;expires=" + d.toGMTString();
+    // for google analytics user
+    gtag('set', {'user_id': value}); // Set the user ID using signed-in user_id.
 }
 
 // function createCORSRequest(method, url) {

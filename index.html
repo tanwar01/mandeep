@@ -31,9 +31,11 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-153519124-1');
-    gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+    
     ga('set', 'userId', 'USER_ID'); // Set the user ID using signed-in user_id.
 	</script>
+  <!-- for google sign in -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script async src="js/trackUser.js"></script>
 
   </head>
@@ -462,6 +464,7 @@
         </div> -->
 
         <div class="row">
+          <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
           <div class="col-12 text-center">
           <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

@@ -18,6 +18,9 @@ function setCookie(value, days) {
     document.cookie = "userId" + "=" + value + ";path=/;expires=" + d.toGMTString();
     // for google analytics user
     gtag('set', {'user_id': value}); // Set the user ID using signed-in user_id.
+    var dimensionValue = value;
+    console.log("setting userid to GA: "+value)
+    ga('set', 'dimension1', dimensionValue);
 }
 
 // function createCORSRequest(method, url) {

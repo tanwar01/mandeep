@@ -1,0 +1,40 @@
+class Solution {
+    public int hIndex(int[] citations) {//[0,3,3,5,6]// [4,4,4,4,4]
+        int n = citations.length;//5
+        // int cit =0;
+        // for(int i=n-1; i>=0; i--){// i=4,3  ,2  ,1     //4  ,3  ,2  ,1  ,0
+        //     if(cit<citations[i]){// 0<6,1<5,2<3,3<3    //0<4,1<4,2<4,3<4,4<4
+        //         cit++;            //   1,2  ,3  ,4     //1  ,2  ,3  ,4
+        //     }else{              
+        //         break;             //             3     //
+        //     }
+        // }
+        // return cit;
+        
+        // aproach 2
+        // int i=n-1;
+        // for( ;i>=0; i--){// i=4,3  ,2  ,1     //4  ,3  ,2  ,1  ,0
+        //     if((n-i-1)>=citations[i]){// 0<6,1<5,2<3,3<3    //0<4,1<4,2<4,3<4,4<4
+        //         break;            //   1,2  ,3  ,4     //1  ,2  ,3  ,4
+        //     }
+        // }
+        // return n-i-1;
+        
+//         aproach 3 with log n time
+        
+        return hIndexInternal(citations, 0, citations.length-1);
+    }
+    
+    public int hIndexInternal(int[] citations, int start, int end){
+        if(end<start){
+            return -1;
+        }
+        int mid = start+ (end-start)/2;
+        if((citations.length -mid -1) >= citations[mid]){
+            return citations.length -mid -1;
+        }
+        hIndexInternal()
+        
+    }
+    
+}
